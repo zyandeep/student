@@ -11,15 +11,37 @@
 	<form method="POST" action="insert_script.php">
 		<p>
 			<label>First Name:</label>
-			<input type="text" name="fname" placeholder="First Name">
+			<input type="text" name="fname" placeholder="First Name" required="required" value="<?php echo (isset($fname)) ? $fname : ''; ?>">
+			<em>
+				<?php 
+					if (isset($fname_error)) {
+						echo $fname_error;
+					}
+				?>	
+			</em>
 		</p>
 		<p>
 			<label>Last Name:</label>
-			<input type="text" name="lname" placeholder="Last Name">
+			<input type="text" name="lname" placeholder="Last Name" required="required" value="<?php echo (isset($lname)) ? $lname : ''; ?>">
+			<em>
+				<?php 
+					if (isset($lname_error)) {
+						echo $lname_error;
+					}
+				 ?>
+			</em>
 		</p>
 		<p>
 			<label>Email:</label>
-			<input type="email" name="email" placeholder="Email">
+			<input type="email" name="email" placeholder="Email" required="required" value="<?php echo (isset($email)) ? $email : ''; ?>">
+			<em>
+				<?php 
+					if (isset($email_error)) {
+						echo $email_error;
+					}
+				 ?>
+			</em>
+
 		</p>
 		<p>
 			<label>Gender: </label>
@@ -40,7 +62,16 @@
 		</p>
 		<p>
 			<label>Address</label>
-			<textarea name="address" placeholder="Address"></textarea>
+			<textarea name="address" placeholder="Address" required="required"><?php echo (isset($address)) ? $address : ''; ?></textarea>
+			<em>
+				<?php 
+					if (isset($address_error)) {
+						echo $address_error;
+					}
+				 ?>
+			</em>
+
+
 		</p>
 		
 		<p>
