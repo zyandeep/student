@@ -12,35 +12,35 @@
 		<p>
 			<label>First Name:</label>
 			<input type="text" name="fname" placeholder="First Name" required="required" value="<?php echo (isset($fname)) ? $fname : ''; ?>">
-			<em>
+			<strong>
 				<?php 
 					if (isset($fname_error)) {
 						echo $fname_error;
 					}
 				?>	
-			</em>
+			</strong>
 		</p>
 		<p>
 			<label>Last Name:</label>
 			<input type="text" name="lname" placeholder="Last Name" required="required" value="<?php echo (isset($lname)) ? $lname : ''; ?>">
-			<em>
+			<strong>
 				<?php 
 					if (isset($lname_error)) {
 						echo $lname_error;
 					}
 				 ?>
-			</em>
+			</strong>
 		</p>
 		<p>
 			<label>Email:</label>
 			<input type="email" name="email" placeholder="Email" required="required" value="<?php echo (isset($email)) ? $email : ''; ?>">
-			<em>
+			<strong>
 				<?php 
 					if (isset($email_error)) {
 						echo $email_error;
 					}
 				 ?>
-			</em>
+			</strong>
 
 		</p>
 		<p>
@@ -63,13 +63,13 @@
 		<p>
 			<label>Address</label>
 			<textarea name="address" placeholder="Address" required="required"><?php echo (isset($address)) ? $address : ''; ?></textarea>
-			<em>
+			<strong>
 				<?php 
 					if (isset($address_error)) {
 						echo $address_error;
 					}
 				 ?>
-			</em>
+			</strong>
 
 
 		</p>
